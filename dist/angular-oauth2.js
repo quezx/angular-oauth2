@@ -113,7 +113,8 @@
                     value: function getAccessToken(data, options) {
                         data = angular.extend({
                             client_id: config.clientId,
-                            grant_type: "password"
+                            grant_type: "client_credentials",
+                            scope:'apply',
                         }, data);
                         if (null !== config.clientSecret) {
                             data.client_secret = config.clientSecret;
